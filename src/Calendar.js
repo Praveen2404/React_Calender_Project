@@ -15,14 +15,12 @@ class Month extends React.Component {
     for (let i = 1; i <= monthLength; i++) {
       monthDays.push(i)
     }
-
     const firstDay = new Date(this.props.year, this.props.month, 1)
     const firstWeekday = firstDay.getDay()
     let emptyDays = []
     for (let i = 0; i < firstWeekday; i++) {
       emptyDays.push(i)
     }
-
     const monthLabel = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
     const weekdayLabel = ['S', 'M', 'T', 'W', 'T', 'F', 'S']
     const previousMonth = this.props.month - 1
